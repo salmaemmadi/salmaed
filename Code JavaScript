@@ -1,0 +1,40 @@
+// Fonction qui se déclenche lors du survol de l'image
+function upDate(previewPic) {
+  // Vérifier si l'événement fonctionne
+  console.log('Événement déclenché!');
+
+  // Afficher les informations sur l'image survolée
+  console.log('Image alt:', previewPic.alt);
+  console.log('Image source:', previewPic.src);
+
+  // Modifier le texte de la div 'image'
+  document.querySelector('#image').innerText = previewPic.alt;
+
+  // Modifier l'image de fond de la div 'image'
+  document.querySelector('#image').style.backgroundImage = `url(${previewPic.src})`;
+}
+
+// Fonction qui réinitialise l'image et le texte
+function unDo() {
+  // Réinitialiser l'URL de l'image d'arrière-plan
+  document.querySelector('#image').style.backgroundImage = "url('')";
+
+  // Réinitialiser le texte
+  document.querySelector('#image').innerText = "Survolez une image ci-dessous pour l'afficher ici";
+}
+
+// Ajouter les écouteurs d'événements aux images
+document.getElementById('img1').addEventListener('mouseover', function() {
+  upDate(this);
+});
+
+document.getElementById('img2').addEventListener('mouseover', function() {
+  upDate(this);
+});
+
+document.getElementById('img3').addEventListener('mouseover', function() {
+  upDate(this);
+});
+
+// Ajouter l'événement d'annulation lorsque la souris quitte la div 'image'
+document.querySelector('#image').addEventListener('mouseleave', unDo);
