@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover Effect</title>
+  <style>
+    #image {
+      width: 400px;
+      height: 300px;
+      background-size: cover;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #ccc;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="image">Hover over an image below to display here</div>
+
+  <div>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image 1" id="img1">
+    <img src="https://via.placeholder.com/150/FF0000/FFFFFF" alt="Placeholder Image 2" id="img2">
+    <img src="https://via.placeholder.com/150/00FF00/FFFFFF" alt="Placeholder Image 3" id="img3">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
